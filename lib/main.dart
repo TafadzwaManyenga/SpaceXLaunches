@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(
       ),
       home: Scaffold(
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           title: const Text('SpaceX Launches'),
         ),
