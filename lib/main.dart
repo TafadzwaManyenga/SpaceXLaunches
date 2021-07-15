@@ -6,12 +6,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to SXL',
+      title: 'SpaceX Launches',
       theme: ThemeData.dark(
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to SXL'),
+          title: const Text('SpaceX Launches'),
         ),
         body: const Center(
           child: Text('Hello Universe'),
