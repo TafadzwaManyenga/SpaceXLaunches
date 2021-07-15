@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'SpaceX Launches',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
         home: Scaffold(
             appBar: AppBar(
