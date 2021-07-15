@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('SpaceX Launches'),
         ),
-        body: const Center(
-          child: Text('Hello Universe'),
+        body: Container(
+          color: Colors.black,
+          child: Text("Rocket Launches"),
         ),
       ),
     );
