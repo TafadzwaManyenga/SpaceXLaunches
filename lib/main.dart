@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,47 +11,83 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark(),
         home: Scaffold(
             appBar: AppBar(
-              title: const Text('SpaceX Launches'),
+              title: const Text(
+                'SpaceX Launches',
+                style: TextStyle(fontFamily: 'transformers', fontSize: 32),
+              ),
             ),
-            body: Row(
+            body: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
+              children: [
                 Container(
-                  height: 100,
-                  width: 100,
                   alignment: Alignment.center,
-                  margin: EdgeInsets.all(5.5),
-                  padding: EdgeInsets.all(10),
-                  child: Text("Rocket Launches"),
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 4, color: Colors.blueAccent),
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.lightBlueAccent,
-                          offset: Offset(6.0, 6.0),
-                        )
-                      ]),
+                  height: 200,
+                  decoration: new BoxDecoration(
+                    borderRadius: new BorderRadius.circular(16.0),
+                    image: DecorationImage(
+                      image: AssetImage('assets/rckt.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: OutlinedButton(
+                    style: TextButton.styleFrom(
+                        primary: Colors.black, backgroundColor: Colors.white),
+                    onPressed: () {},
+                    child: Text('Launches'),
+                  ),
                 ),
                 Container(
-                  height: 100,
-                  width: 100,
                   alignment: Alignment.center,
-                  margin: EdgeInsets.all(5.5),
-                  padding: EdgeInsets.all(10),
-                  child: Text("About"),
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 4, color: Colors.green),
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.lightGreenAccent,
-                          offset: Offset(6.0, 6.0),
-                        )
-                      ]),
-                )
+                  height: 200,
+                  decoration: new BoxDecoration(
+                    borderRadius: new BorderRadius.circular(16.0),
+                    image: DecorationImage(
+                      image: AssetImage('assets/rckt1.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: TextButton(
+                    style: TextButton.styleFrom(primary: Colors.black, backgroundColor: Colors.white),
+                    onPressed: () {},
+                    child: Text('Sort by Mission'),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  height: 200,
+                  decoration: new BoxDecoration(
+                    borderRadius: new BorderRadius.circular(16.0),
+                    image: DecorationImage(
+                      image: AssetImage('assets/ecl.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      primary: Colors.black, backgroundColor: Colors.white,
+                    ),
+                    onPressed: () {},
+                    child: Text('Sort by Date'),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  height: 200,
+                  decoration: new BoxDecoration(
+                    borderRadius: new BorderRadius.circular(16.0),
+                    image: DecorationImage(
+                      image: AssetImage('assets/astr.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      primary: Colors.black, backgroundColor: Colors.white
+                    ),
+                    onPressed: () {},
+                    child: Text('Filter by Success'),
+                  ),
+                ),
               ],
             )));
   }
