@@ -56,7 +56,12 @@ class MyHomePage extends StatelessWidget {
             child: TextButton(
               style: TextButton.styleFrom(
                   primary: Colors.black, backgroundColor: Colors.white),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => mission()),
+                );
+              },
               child: Text('Sort by Mission'),
             ),
           ),
