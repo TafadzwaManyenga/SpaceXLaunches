@@ -80,7 +80,12 @@ class MyHomePage extends StatelessWidget {
                 primary: Colors.black,
                 backgroundColor: Colors.white,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => dates()),
+                );
+              },
               child: Text('Sort by Date'),
             ),
           ),
