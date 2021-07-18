@@ -34,7 +34,12 @@ class MyHomePage extends StatelessWidget {
             child: OutlinedButton(
               style: TextButton.styleFrom(
                   primary: Colors.black, backgroundColor: Colors.white),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => launches()),
+                );
+              },
               child: Text('Launches'),
             ),
           ),
@@ -102,7 +107,10 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blueGrey,
+                image: DecorationImage(
+                  image: AssetImage('assets/clds.jpeg'),
+                  fit: BoxFit.cover,
+                ),
               ),
               child: Text('SpaceX Launches v1.0'),
             ),
