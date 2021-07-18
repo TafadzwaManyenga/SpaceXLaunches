@@ -55,6 +55,7 @@ flutter:
     - assets/rckt1.jpeg
     - assets/ecl.jpeg
     - assets/astr.jpeg
+    - assets/clds.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
