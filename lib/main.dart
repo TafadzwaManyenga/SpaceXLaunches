@@ -1,7 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:SpaceX_Launches/screens/home_screen.dart';
+
+import 'dart:convert';
 import 'package:http/http.dart';
 
 void main() => runApp(
@@ -43,25 +43,25 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    fetchPosts();
-    // return MaterialApp(
-    //   title: appTitle,
-    //   debugShowCheckedModeBanner: false,
-    //   theme: ThemeData.dark(),
-    //   home: MyHomePage(title: appTitle),
-    // );
-
+    // fetchPosts();
     return MaterialApp(
       title: appTitle,
-      home: Scaffold(
-        body: ListView.builder(
-          itemCount: _postsJson.length,
-          itemBuilder: (context, i){
-            final post = _postsJson[i];
-            return Text("Mission: ${post["mission_name"]}\n");
-          }
-        ),
-      )
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
+      home: MyHomePage(title: appTitle),
     );
+
+    // return MaterialApp(
+    //   title: appTitle,
+    //   home: Scaffold(
+    //     body: ListView.builder(
+    //       itemCount: _postsJson.length,
+    //       itemBuilder: (context, i){
+    //         final post = _postsJson[i];
+    //         return Text("Mission: ${post["mission_name"]}\n");
+    //       }
+    //     ),
+    //   )
+    // );
   }
 }
