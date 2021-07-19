@@ -7,13 +7,16 @@ class launches extends StatelessWidget {
       appBar: AppBar(
         title: Text("Launches"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
+      body: Column(
+        children: [
+
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text('Go back!'),
+          ),
+        ],
       ),
     );
   }
