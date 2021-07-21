@@ -16,13 +16,11 @@ class Launch {
   final int flightNumber;
   final String missionName;
   final String launchYear;
-  final String details;
 
   Launch({
     required this.flightNumber,
     required this.missionName,
     required this.launchYear,
-    required this.details,
   });
 
 
@@ -31,7 +29,6 @@ class Launch {
     flightNumber: json["flight_number"],
     missionName: json["mission_name"],
     launchYear: json["launch_year"],
-    details: json["details"]
   );
   }
 
