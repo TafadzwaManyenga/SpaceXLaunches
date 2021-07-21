@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:SpaceX_Launches/data/missions_repo.dart';
+import 'package:SpaceX_Launches/models/missions.dart';
 
 class mission extends StatelessWidget {
   @override
@@ -7,13 +9,33 @@ class mission extends StatelessWidget {
       appBar: AppBar(
         title: Text("Missions"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
+      body: FutureBuilder<List<Mission>>(
+        future: MissionRepository().getMissions(),
+        builder: (context, snapshot) {
+          if(snapshot.hasData){
+            return ListView.builder(
+              itemCount: snapshot.data!.length,
+              itemBuilder: (context, i) {
+                return Container(
+                  child: Center(
+                    child: Card(
+                      child: ListTile(
+                          // tileColor: Colors.blueGrey,
+                          title: Text(snapshot.data![i].missionName),
+                          subtitle: Text(snapshot.data![i].description)
+                      ),
+                    ),
+                ),
+                );
+              }
+            );
+          } else if (snapshot.hasError) {
+            return Text("${snapshot.error}");
+          }
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+      }
       ),
     );
   }
