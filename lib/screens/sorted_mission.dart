@@ -22,7 +22,7 @@ class mission extends StatelessWidget {
                       child: ListTile(
                           // tileColor: Colors.blueGrey,
                           title: Text(snapshot.data![i].missionName),
-                          subtitle: Text(snapshot.data![i].description)
+                              subtitle: Text(snapshot.data![i].description),
                       ),
                     ),
                 ),

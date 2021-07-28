@@ -4,7 +4,6 @@ import 'package:SpaceX_Launches/data/launches_repo.dart';
 import 'package:SpaceX_Launches/models/launches.dart';
 
 class Launches extends StatelessWidget {
-  // late Future<Launch> futureLaunch = LaunchRepository().getLaunches();
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +35,7 @@ class Launches extends StatelessWidget {
           return Center(
             child: CircularProgressIndicator(),
           );
-        },
-
-        // child: ElevatedButton(
-        //   onPressed: () {
-        //     Navigator.pop(context);
-        //   },
-        //   child: Text('Go back!'),
-        // ),
+        }
       ),
     );
   }
