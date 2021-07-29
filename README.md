@@ -35,3 +35,8 @@ of the code.
 The HTTP package from pub.dev
 The Transformers font from dafont.com
 The intl packafe from pub.dev
+
+##Future Additions
+- The application requires a separate screen for detailed information on the basic launch data.
+- The application requires a splash screen on opening.
+- The application requires a sort by ascending and descending option for all filtered information.
