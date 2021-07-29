@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:SpaceX_Launches/data/missions_repo.dart';
 import 'package:SpaceX_Launches/models/missions.dart';
 
-class mission extends StatelessWidget {
+class Missions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class mission extends StatelessWidget {
                       child: ListTile(
                           // tileColor: Colors.blueGrey,
                           title: Text(snapshot.data![i].missionName),
-                          subtitle: Text(snapshot.data![i].description)
+                              subtitle: Text(snapshot.data![i].description)
                       ),
                     ),
                 ),
@@ -36,7 +36,7 @@ class mission extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
       }
-      ),
+      )
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:SpaceX_Launches/models/missions.dart';
 
-final url = "https://api.spacexdata.com/v3/history";
+final url = "https://api.spacexdata.com/v3/missions";
 
 class MissionRepository {
   Future<List<Mission>> getMissions() async {

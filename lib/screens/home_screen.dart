@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:SpaceX_Launches/screens/basic_data.dart';
 import 'package:SpaceX_Launches/screens/sorted_date.dart';
 import 'package:SpaceX_Launches/screens/sorted_mission.dart';
+import 'package:SpaceX_Launches/screens/about.dart';
 
 class MyHomePage extends StatelessWidget {
   final String title;
@@ -59,7 +60,7 @@ class MyHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => mission()),
+                  MaterialPageRoute(builder: (context) => Missions()),
                 );
               },
               child: Text('Sort by Mission'),
@@ -83,7 +84,7 @@ class MyHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => dates()),
+                  MaterialPageRoute(builder: (context) => Dates()),
                 );
               },
               child: Text('Sort by Date'),
@@ -105,7 +106,7 @@ class MyHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => successes()),
+                  MaterialPageRoute(builder: (context) => Successes()),
                 );
               },
               child: Text('Filter by Success'),
@@ -130,21 +131,15 @@ class MyHomePage extends StatelessWidget {
               child: Text('SpaceX Launches v1.0'),
             ),
             ListTile(
-              title: Text('Basic Launch Data'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
               title: Text('About'),
               onTap: () {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),
+                );
               },
             ),
           ],

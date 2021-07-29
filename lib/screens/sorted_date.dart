@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 
-class dates extends StatelessWidget {
+class Dates extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class dates extends StatelessWidget {
                     child: Center(
                       child: Card(
                         child: ListTile(
-                            title: Text(DateFormat("yyyy-MM-dd hh:mm:ss").format(snapshot.data![i].eventDateUtc)),
+                            title: Text(DateFormat("yyyy/MM/dd hh:mm").format(snapshot.data![i].eventDateUtc)),
                             subtitle: Text(snapshot.data![i].title)
                         ),
                       ),
