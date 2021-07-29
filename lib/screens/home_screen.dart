@@ -59,7 +59,7 @@ class MyHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => mission()),
+                  MaterialPageRoute(builder: (context) => Missions()),
                 );
               },
               child: Text('Sort by Mission'),
@@ -105,7 +105,7 @@ class MyHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => successes()),
+                  MaterialPageRoute(builder: (context) => Successes()),
                 );
               },
               child: Text('Filter by Success'),

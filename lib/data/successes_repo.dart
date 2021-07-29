@@ -1,10 +1,10 @@
 import 'package:http/http.dart' as http;
 import 'package:SpaceX_Launches/models/successes.dart';
 
-final url = "https://api.spacexdata.com/v3/history";
+final url = "https://api.spacexdata.com/v3/launches";
 
-class HistoryRepository {
-  Future<List<Success>> getHistory() async {
+class SuccessesRepository {
+  Future<List<Success>> getSuccesses() async {
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
