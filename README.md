@@ -2,15 +2,36 @@
 
 Space X Launch data displayed in a Mobile App made with Flutter.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+The project implements the API found at https://api.spacexdata.com/v3/history
 
-A few resources to get you started if this is your first Flutter project:
+The main screen shows 4 containers each with a button that leads to different sections of the application.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+###Launches
+This displays a ListView of ListTiles that display the Name of the Launch Missions and the Year they were completed.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Upon tapping any of the tiles we are shown the details of the launch in a SnackBar at the bottom of the screen.
+
+###Missions
+This screen displays the mission category names and their description.
+
+###Date
+This section of the app shows the date and time of the launches in ascending (oldest date first).
+
+###Success
+This section of the application filters out for the successful SpaceX missions ONLY.
+
+
+##Architecture
+The application was made using SOLID design principles, and Atomic Design Theory. There are 3 subdirectories in the "lib" directory.
+These are the data, models and screens subdirectories. The data directory contains the logic for API calls, the models directory
+contains the logic for data types and their structure, and the screens directory contains the logic for the nagivation of the application.
+Most objects were modelled based on their corresponding widgets, classes were named intuitively, and there was a single reponsibility
+involved in creating the different objects such that if there is a need for substitution it can be made without breaking the rest
+of the code.
+
+##Dependencies
+The HTTP package from pub.dev
+The Transformers font from dafont.com
+The intl packafe from pub.dev
